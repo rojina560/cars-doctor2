@@ -17,7 +17,7 @@ const ServiceCart = ({service}) => {
   
     <div className="card-actions flex justify-between items-center">
     <p>price:${price}</p>
-      <Link to={`/checkout/${_id}`}><FaArrowRight></FaArrowRight></Link>
+      <Link to={`/bookService/${_id}`}><FaArrowRight></FaArrowRight></Link>
     </div>
   </div>
 </div>

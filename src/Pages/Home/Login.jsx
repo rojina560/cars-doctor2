@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import login from '../../assets/images/login/login.svg'
+import  { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 
@@ -57,7 +56,7 @@ const Login = () => {
           <button className="btn btn-primary">Login</button>
         </div>
       </form>
-      <p className='text-center pb-5'>new to car doctors <Link className='text-orange-600 text-xl font-semibold' to={'/signUp'}> login</Link> </p>
+      <p className='text-center pb-5'>new to car doctors <Link className='text-orange-600 text-xl font-semibold' to={'/signUp'}> signUp</Link> </p>
     </div>
   </div>
 </div>

@@ -3,7 +3,10 @@ import Main from "../Layouts/Main";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Home/Login";
 import SignUp from "../Pages/Home/SignUp";
-import Checkout from "../Pages/Checkout/Checkout";
+
+import BookService from "../Pages/BookService/BookService";
+import Bookings from "../Pages/Bookings/Bookings";
+import PrivateRoutes from "./PrivateRoutes";
 
 const  router = createBrowserRouter([{
     path: '/',
@@ -23,11 +26,16 @@ const  router = createBrowserRouter([{
         element: <SignUp></SignUp>
     },
     {
-        path: '/checkout/:id',
-        element: <Checkout></Checkout>,
-        loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
-    }
+        path: '/bookService/:id',
+        element: <BookService />,
+        loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+      },
+      {
+        path: '/bookings',
+        element: <PrivateRoutes><Bookings></Bookings></PrivateRoutes>
+      }
+    
 ]
 
 }])
-export default router
+export default router 
